@@ -17,7 +17,7 @@ export const ISRO_MISSIONS = [
       'Successful demonstration of safe landing capabilities',
       'Operated for approximately 14 Earth days on the lunar surface'
     ],
-    link: '/missions/chandrayaan-3'
+    link: 'chandrayaan-3'
   },
   {
     id: 'mangalyaan',
@@ -30,7 +30,7 @@ export const ISRO_MISSIONS = [
       'Most cost-effective Mars mission to date',
       'Operated successfully for over 7 years, far exceeding its designed mission life'
     ],
-    link: '/missions/mangalyaan'
+    link: 'mangalyaan'
   },
   {
     id: 'astrosat',
@@ -43,7 +43,7 @@ export const ISRO_MISSIONS = [
       'Simultaneous multi-wavelength observations',
       'Discoveries of new star-forming regions'
     ],
-    link: '/missions/astrosat'
+    link: 'astrosat'
   },
   {
     id: 'chandrayaan-1',
@@ -56,7 +56,7 @@ export const ISRO_MISSIONS = [
       'Created detailed 3D maps of the lunar surface',
       'Operated for 312 days with 95% mission success'
     ],
-    link: '/missions/chandrayaan-1'
+    link: 'chandrayaan-1'
   }
 ];
 

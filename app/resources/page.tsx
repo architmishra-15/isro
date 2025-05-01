@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Download, FileText, Video, BookOpen, Database, Filter, ArrowRight, CalendarDays, Link2 } from "lucide-react";
+import { ButtonLink } from "@/components/ui/button-link";
 
 export default function ResourcesPage() {
   return (
@@ -322,30 +323,31 @@ export default function ResourcesPage() {
                 image: "https://images.pexels.com/photos/355956/pexels-photo-355956.jpeg"
               },
             ].map((resource, index) => (
-              <div key={index} className="card-glow overflow-hidden">
+              <a 
+                key={index} 
+                href={resource.link}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="card-glow overflow-hidden block group"
+              >
                 <div className="relative h-36 overflow-hidden">
                   <Image
                     src={resource.image}
                     alt={resource.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
                   <p className="text-slate-300 text-sm mb-4">{resource.description}</p>
-                  <a 
-                    href={resource.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm"
-                  >
+                  <div className="inline-flex items-center text-blue-400 group-hover:text-blue-300 transition-colors text-sm">
                     <Link2 className="h-3.5 w-3.5 mr-1" />
                     Visit resource
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </section>
@@ -384,7 +386,11 @@ export default function ResourcesPage() {
                     format: "Workshop Material"
                   }
                 ].map((course, index) => (
-                  <div key={index} className="flex items-start p-4 rounded-lg bg-slate-800/30 hover:bg-slate-800/50 transition-colors">
+                  <a 
+                    key={index} 
+                    href="#"
+                    className="flex items-start p-4 rounded-lg bg-slate-800/30 hover:bg-slate-800/50 transition-colors block"
+                  >
                     <div className="rounded-md bg-blue-500/20 p-2 mr-4">
                       <BookOpen className="h-5 w-5 text-blue-500" />
                     </div>
@@ -401,14 +407,13 @@ export default function ResourcesPage() {
                           {course.format}
                         </span>
                       </div>
-                      <a
-                        href="#"
+                      <span
                         className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
                       >
                         Access materials
-                      </a>
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -456,12 +461,12 @@ export default function ResourcesPage() {
               </div>
               
               <div className="mt-8">
-                <Link 
+                <ButtonLink 
                   href="#"
                   className="space-button inline-flex items-center text-sm"
                 >
                   Explore Educational Resources <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+                </ButtonLink>
               </div>
             </div>
           </div>

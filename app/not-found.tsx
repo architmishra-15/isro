@@ -8,6 +8,7 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader.js";
 import * as THREE from "three";
 import { ArrowLeft } from "lucide-react";
+import { ButtonLink } from "@/components/ui/button-link";
 
 function RocketModel() {
   const groupRef = useRef<THREE.Group>(null);
@@ -165,13 +166,13 @@ export default function NotFound() {
             The page you're looking for has been lost in space. Our astronauts are working on finding it.
           </p>
           
-          <Link 
+          <ButtonLink 
             href="/"
             className="space-button inline-flex items-center justify-center gap-2"
           >
             <ArrowLeft className="h-5 w-5" />
             <span>Return to Mission Control</span>
-          </Link>
+          </ButtonLink>
         </motion.div>
       </div>
       

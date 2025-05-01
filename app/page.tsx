@@ -4,6 +4,7 @@ import { Rocket, ArrowRight, Award, Globe, Calendar, ChevronDown } from "lucide-
 import { ISRO_MISSIONS } from "@/lib/utils";
 import { FocusCards } from "@/components/ui/focus-cards";
 import focusMissionsData from "@/data/focusMissions.json";
+import { ButtonLink } from "@/components/ui/button-link";
 
 export default function Home() {
   return (
@@ -20,14 +21,14 @@ export default function Home() {
             for national development while pursuing planetary exploration.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/missions" className="space-button flex items-center justify-center gap-2">
+            <ButtonLink href="/missions" className="space-button flex items-center justify-center gap-2">
               <Rocket className="h-5 w-5" />
               <span>Explore Missions</span>
-            </Link>
-            <Link href="/about" className="rounded-lg border border-slate-700 bg-black/50 px-5 py-2.5 text-white transition-all hover:bg-slate-800 flex items-center justify-center gap-2">
+            </ButtonLink>
+            <ButtonLink href="/about" className="rounded-lg border border-slate-700 bg-black/50 px-5 py-2.5 text-white transition-all hover:bg-slate-800 flex items-center justify-center gap-2">
               <span>Learn About ISRO</span>
               <ArrowRight className="h-5 w-5" />
-            </Link>
+            </ButtonLink>
           </div>
         </div>
         
@@ -55,9 +56,10 @@ export default function Home() {
           {/* Existing mission cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {ISRO_MISSIONS.map((mission, index) => (
-              <div 
+              <Link 
                 key={mission.id}
-                className="card-glow group duration-300 ease-in-out hover:transform hover:scale-105"
+                href={`/missions/${mission.link}`}
+                className="card-glow group duration-300 ease-in-out hover:transform hover:scale-105 block"
               >
                 <div className="relative w-full h-40 mb-4 overflow-hidden rounded-lg">
                   <Image
@@ -75,13 +77,12 @@ export default function Home() {
                 <p className="text-slate-300 text-sm line-clamp-3 mb-4">
                   {mission.description}
                 </p>
-                <Link 
-                  href={`/missions/${mission.link}`}
+                <div 
                   className="text-blue-400 text-sm font-medium flex items-center hover:text-blue-300 transition-colors"
                 >
                   Learn more <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
+                </div>
+              </Link>
             ))}
           </div>
           
@@ -175,10 +176,10 @@ export default function Home() {
             <p className="mx-auto max-w-2xl text-lg text-slate-300 mb-10">
               Join us on this incredible journey of discovery as we explore the cosmos and push the boundaries of human knowledge.
             </p>
-            <Link href="/contact" className="space-button inline-flex items-center justify-center gap-2">
+            <ButtonLink href="/contact" className="space-button inline-flex items-center justify-center gap-2">
               <span>Get in Touch</span>
               <ArrowRight className="h-5 w-5" />
-            </Link>
+            </ButtonLink>
           </div>
         </div>
       </section>
