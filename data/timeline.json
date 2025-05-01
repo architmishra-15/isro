@@ -1,0 +1,44 @@
+[
+  {
+    "title": "1969",
+    "content": {
+      "heading": "Founding of ISRO",
+      "description": "ISRO was formed as an independent space agency, marking India's formal entry into space research and exploration."
+    }
+  },
+  {
+    "title": "1975",
+    "content": {
+      "heading": "First Satellite Launch",
+      "description": "Aryabhata, India's first satellite, was launched with assistance from the Soviet Union, beginning India's satellite program."
+    }
+  },
+  {
+    "title": "1980",
+    "content": {
+      "heading": "SLV-3 Success",
+      "description": "First successful launch of the indigenous SLV-3 rocket, establishing India's capability to build and launch its own satellites."
+    }
+  },
+  {
+    "title": "2008",
+    "content": {
+      "heading": "Chandrayaan-1",
+      "description": "India's first lunar mission discovered water molecules on the Moon, changing our understanding of the lunar surface."
+    }
+  },
+  {
+    "title": "2013",
+    "content": {
+      "heading": "Mars Orbiter Mission",
+      "description": "India became the first nation to reach Mars in its maiden attempt, demonstrating ISRO's technical excellence and cost-effective approach."
+    }
+  },
+  {
+    "title": "2023",
+    "content": {
+      "heading": "Chandrayaan-3",
+      "description": "Successful landing near the lunar south pole, making India the fourth country to achieve a soft landing on the Moon and the first to land near the lunar south pole."
+    }
+  }
+] 

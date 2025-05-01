@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Launch Vehicles",
+    "description": "Developing reliable and cost-effective launch vehicles for various satellite deployment missions",
+    "icon": "Rocket"
+  },
+  {
+    "title": "Earth Observation",
+    "description": "Monitoring Earth's resources, environment, and climate through sophisticated satellite systems",
+    "icon": "Globe"
+  },
+  {
+    "title": "Space Applications",
+    "description": "Utilizing space technology for societal applications like telecommunication, weather forecasting, and disaster management",
+    "icon": "Database"
+  },
+  {
+    "title": "Research & Development",
+    "description": "Advancing space science, technology, and exploration through innovative research",
+    "icon": "Brain"
+  }
+] 
